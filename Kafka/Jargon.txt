@@ -1,1 +1,10 @@
-repo init.
+1- kafka store the information in it(great advantage which is not present in redis). say that store the email message in queue for a long time say 1 year and again process it async.
+2- say that go back in time and play the event again.
+3- we can scale it and it is fault tolreance distrbuted system. means if any kafka node fail then it automatically shift its workload to other nodes with no data lost.
+4- https://projects.100xdevs.com/tracks/kafka/Kafka-1
+5- It is similar to redis pubs/subs.
+6- 
+7-
+8-
+9-
+10-
