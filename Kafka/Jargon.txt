@@ -1,10 +1,21 @@
+- what is kafka = kafka is a distrbuted streaming event platform design to handle high throughput , low  latency data streaming .
+- kafka is  same as redis sotre the data in RAM so it is very fast.
+- Dataabse has very low throughput .(throughput is number of operation done in 1 second)
+- to explain it we can take the example of zomato live tracking of dilivery boy .It can also seen by user with low latency and  high throughput .
+- kafka store the data for short time and other service use this date for their proccessing after that it bulk insert the data in DB (take some time but we can ignore it.)
+- kafka use the concept of consumer aand producer and try to behave as both queue and pub/subs .
+- 
+
+
+
 1- kafka store the information in it(great advantage which is not present in redis). say that store the email message in queue for a long time say 1 year and again process it async.
 2- say that go back in time and play the event again.
 3- we can scale it and it is fault tolreance distrbuted system. means if any kafka node fail then it automatically shift its workload to other nodes with no data lost.
 4- https://projects.100xdevs.com/tracks/kafka/Kafka-1
 5- It is similar to redis pubs/subs.
-6- 
-7-
-8-
-9-
-10-
+6- When we produce something in case of shell command in that case at every consumer instance we will receive it. But when we implement this using the nodejs process and run multiple instance of consumer file then at a time only 1 instance will recieve the message from the topic.
+   here a new concept is `arise partitions and Consumer groups`.
+7- In above case actually all consumer instance is present in same group and in same group there is load balancing provide by kafka. So that at one time only 1 instance will receive the messages. 
+8- Consumer group is differentiate by groupId provide in parameters.
+9- Parallel Processing: Consumers in a group can process different partitions in parallel, improving throughput and scalability.
+10- After that follow the dailyCode track.
